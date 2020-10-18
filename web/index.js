@@ -11,7 +11,7 @@ const Input = ({ label, value, onChange }) => {
   return (
     <div className="flex items-center">
       <div className="w-1/3">
-        <label className="block text-gray-500 font-bold text-right mb-1 mb-0 pr-4" htmlFor="inline-full-name">
+        <label className="block text-gray-500 font-bold text-right mb-1 mb-0 pr-4">
           {label}
         </label>
       </div>
@@ -19,6 +19,33 @@ const Input = ({ label, value, onChange }) => {
         <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
         value={value}
         onChange={onChange} />
+      </div>
+    </div>
+  )
+}
+
+const SelectInput = ({ label, value, options, onChange }) => {
+  return (
+    <div className="flex items-center">
+      <div className="w-1/3">
+        <label className="block text-gray-500 font-bold text-right mb-1 mb-0 pr-4">
+          {label}
+        </label>
+      </div>
+      <div className="w-2/3">
+        <div class="relative">
+          <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 mb-1 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            onChange={onChange}>
+            {options.map( ({ label, value : optValue }) => {
+              return (
+                <option key={optValue} value={optValue}>{label}</option>
+              )
+            })}
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -40,6 +67,7 @@ const App = () => {
   const [dataPoints, setDataPoints] = useState([])
   const [count, setCount] = useState(1)
   const [alias, setAlias] = useState("")
+  const [datatype, setDatatype] = useState("training")
   const [apiKey, setApiKey] = useState("")
   const [hmacKey, setHmacKey] = useState("")
   useEffect( () => {
@@ -111,7 +139,7 @@ const App = () => {
     const signature = hmac.digest().toString('hex')
     data.signature = signature
     encoded = JSON.stringify(data)
-    const url = 'https://ingestion.edgeimpulse.com/api/training/data'
+    const url = `https://ingestion.edgeimpulse.com/api/${datatype}/data`
     const headers = {
       'x-api-key': apiKey,
       'x-file-name': alias,
@@ -137,6 +165,14 @@ const App = () => {
         </Button>
         {sensor.connected && <PrimaryButton onClick={onReset}>Clear</PrimaryButton>}
         {sensor.connected && <PrimaryButton onClick={onRemoveLast}>Remove last reading</PrimaryButton>}
+        {sensor.connected && <SelectInput label="Dataset Type"
+          value={datatype}
+          options={[
+            { label : 'Training', value : 'training' },
+            { label : 'Test', value : 'testing' },
+            { label : 'Anomaly', value : 'anomaly' },
+          ]}
+          onChange={ e => setDatatype(e.target.value)}/>}
         {sensor.connected && <Input label="Dataset Label"
           value={alias}
           onChange={e => setAlias(e.target.value)} />}

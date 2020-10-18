@@ -3,8 +3,6 @@ const BT_NUS_SERVICE_UUID = '6e400001-b5a3-f393-e0a9-e50e24dcca9e'
 const BT_RX_CHARACTERISTIC_UUID = '6e400002-b5a3-f393-e0a9-e50e24dcca9e'
 const BT_TX_CHARACTERISTIC_UUID = '6e400003-b5a3-f393-e0a9-e50e24dcca9e'
 
-const ON_DATA_EVENT_TYPE = 'ondata'
-
 export class TennisSensor {
 
   constructor(){
@@ -28,7 +26,7 @@ export class TennisSensor {
 
   clearLastReading(){
     delete this.groupedDatasets[this.currentDataset]
-    const nData = []
+    let nData = []
     Object.keys(this.groupedDatasets)
       .sort()
       .forEach( datasetKey => {
@@ -74,13 +72,13 @@ export class TennisSensor {
       const pos = value.getInt32(48, true);
       const out = { ax ,ay ,az, gx, gy, gz, pos }
       if(pos < currentPos){
-        currentDataset = String(Date.now())
-        this.groupedDatasets[currentDataset] = []
+        this.currentDataset = String(Date.now())
+        this.groupedDatasets[this.currentDataset] = []
       }
       currentPos = pos
       console.log( out )
       this.data.push(out)
-      this.groupedDatasets[currentDataset].push(out)
+      this.groupedDatasets[this.currentDataset].push(out)
       this.listeners.forEach( cb => cb(out) )
       //this.dispatchEvent(new Event(ON_DATA_EVENT_TYPE, out))
     })
