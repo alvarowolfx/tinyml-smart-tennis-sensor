@@ -1,0 +1,18 @@
+&i2c1 {
+  compatible = "nordic,nrf-twi";
+  status = "okay";
+	sda-pin = <29>;
+	scl-pin = <31>;
+
+	mpu6050@68 {
+		compatible = "invensense,mpu6050";
+		reg = <0x68>;
+		status = "okay";
+		label = "MPU6050";
+		int-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+	};
+};
+
+&spi1 {
+  status = "disabled";
+};
