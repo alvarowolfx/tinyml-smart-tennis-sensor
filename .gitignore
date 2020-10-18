@@ -9,11 +9,12 @@
 src_old
 tinyml-tennis-collector
 prj-microbit.conf
+nrf52-zephyr-edge-impulse-classifier/lib/ei-tennis-sensor
 
 # Web interface
-web/node_modules
-web/dist
-web/.cache
+*/node_modules
+*/dist
+*/.cache
 
 # Creds
 keys.md

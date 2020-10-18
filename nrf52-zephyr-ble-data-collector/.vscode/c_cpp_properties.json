@@ -1,0 +1,80 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Mac",
+            "macFrameworkPath": [],
+            "includePath": [
+                "/Users/alvaroviebrantz/Documents/Desenvolvimento/IoT/tinyml-tennis-sensor/include",
+                "/Users/alvaroviebrantz/Documents/Desenvolvimento/IoT/tinyml-tennis-sensor/src",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/include",
+                "/Users/alvaroviebrantz/Documents/Desenvolvimento/IoT/tinyml-tennis-sensor/.pio/build/nrf52840dongle/zephyr/include/generated",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/soc/arm/nordic_nrf/nrf52",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/subsys/usb",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/subsys/bluetooth",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-tinycrypt/lib/include",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic/nrfx",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic/nrfx/drivers/include",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic/nrfx/mdk",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-cmsis/CMSIS/Core/Include",
+                "/Users/alvaroviebrantz/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/alvaroviebrantz/Documents/Desenvolvimento/IoT/tinyml-tennis-sensor/include",
+                    "/Users/alvaroviebrantz/Documents/Desenvolvimento/IoT/tinyml-tennis-sensor/src",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/include",
+                    "/Users/alvaroviebrantz/Documents/Desenvolvimento/IoT/tinyml-tennis-sensor/.pio/build/nrf52840dongle/zephyr/include/generated",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/soc/arm/nordic_nrf/nrf52",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/subsys/usb",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/subsys/bluetooth",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-tinycrypt/lib/include",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic/nrfx",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic/nrfx/drivers/include",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic/nrfx/mdk",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-hal-nordic",
+                    "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr-cmsis/CMSIS/Core/Include",
+                    "/Users/alvaroviebrantz/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=50001",
+                "ARDUINO_NRF52_DK",
+                "BUILD_VERSION=zephyr-v20300",
+                "KERNEL",
+                "NRF52840_XXAA",
+                "_FORTIFY_SOURCE=2",
+                "__PROGRAM_START",
+                "__ZEPHYR__=1",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c99",
+            "forcedInclude": [
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/include/toolchain/zephyr_stdint.h",
+                "/Users/alvaroviebrantz/Documents/Desenvolvimento/IoT/tinyml-tennis-sensor/.pio/build/nrf52840dongle/zephyr/include/generated/autoconf.h",
+                ""
+            ],
+            "compilerPath": "/Users/alvaroviebrantz/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mabi=aapcs",
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-isystem",
+                "/Users/alvaroviebrantz/.platformio/packages/framework-zephyr/lib/libc/minimal/include",
+                "-isystem",
+                "/Users/alvaroviebrantz/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/8.2.1/include",
+                "-isystem",
+                "/Users/alvaroviebrantz/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/8.2.1/include-fixed",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
