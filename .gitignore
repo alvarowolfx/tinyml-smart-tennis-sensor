@@ -9,6 +9,8 @@
 src_old
 tinyml-tennis-collector
 prj-microbit.conf
+
+# Do not include Edge Impulse exported lib
 nrf52-zephyr-edge-impulse-classifier/lib/ei-tennis-sensor
 
 # Web interface
@@ -18,3 +20,6 @@ nrf52-zephyr-edge-impulse-classifier/lib/ei-tennis-sensor
 
 # Creds
 keys.md
+
+# compiled firmware
+firmware.zip
