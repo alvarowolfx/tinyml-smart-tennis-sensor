@@ -16,8 +16,8 @@ Demo video of the classification:
 
 ️ ⚠️️️️**THIS IS A WORK IN PROGRESS** ⚠️
 
-<img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/master/.images/particle-xenon-sensor.jpeg" width="20%" height="20%" /> <img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/master/.images/dongle-racket.jpeg" width="20%" height="20%" /> <img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/master/.images/dongle-front.jpeg" width="20%" height="20%" /> <img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/master/.images/dongle-battery.jpeg" width="20%" height="20%" />
-<img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/master/.images/dongle-back.jpeg" width="20%" height="20%" />
+<img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/main/.images/particle-xenon-sensor.jpeg" width="20%" height="20%" /> <img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/main/.images/dongle-racket.jpeg" width="20%" height="20%" /> <img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/main/.images/dongle-front.jpeg" width="20%" height="20%" /> <img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/main/.images/dongle-battery.jpeg" width="20%" height="20%" />
+<img src="https://github.com/alvarowolfx/tinyml-smart-tennis-sensor/raw/main/.images/dongle-back.jpeg" width="20%" height="20%" />
 ![Web UI](./images/web-ui.png)
 
 ### TODO
