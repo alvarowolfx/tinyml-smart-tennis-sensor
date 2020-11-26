@@ -7,7 +7,7 @@
 
 # Test projects
 src_old
-tinyml-tennis-collector
+#tinyml-tennis-collector
 prj-microbit.conf
 
 # Do not include Edge Impulse exported lib
